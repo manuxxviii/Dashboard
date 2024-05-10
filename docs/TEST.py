@@ -13,7 +13,7 @@ plt.title('Beispiel-Diagramm')
 
 
 # Speichern des Plots als Bild
-plt.savefig('plot.png')
+plt.savefig('plot1.png')
 
 
 # Beispiel-Daten
