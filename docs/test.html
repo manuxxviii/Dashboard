@@ -1,0 +1,48 @@
+
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktives Diagramm</title>
+    <!-- Plotly JavaScript-Bibliothek einbinden -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<h1>Interaktives Diagramm</h1>
+
+<!-- Div-Element für das interaktive Diagramm -->
+<div id="interaktives_diagramm"></div>
+
+<script>
+    // Daten für das Diagramm
+    var data = [{
+        x: ['2024-05-01', '2024-05-02', '2024-05-03'],
+        y: [5, 10, 8],
+        type: 'bar'
+    }];
+
+    // Layout für das Diagramm
+    var layout = {
+        title: 'Summe der Dauer (in Stunden) für jeden Tag nach Profil ausgewählt',
+        xaxis: {
+            title: 'Datum'
+        },
+        yaxis: {
+            title: 'Summe der Dauer (Stunden)'
+        }
+    };
+
+    // Optionen für das Diagramm
+    var options = {
+        responsive: true
+    };
+
+    // Interaktives Diagramm erstellen
+    Plotly.newPlot('interaktives_diagramm', data, layout, options);
+</script>
+
+</body>
+</html>
