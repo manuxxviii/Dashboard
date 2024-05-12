@@ -27,3 +27,5 @@ fig = px.bar(user_titles_count_sorted, x='Title', y='Count', color='Profile Name
 fig.update_layout(xaxis_tickangle=-45)
 fig.show()
 
+fig.write_html('titel_user_overall.html')
+
