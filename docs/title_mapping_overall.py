@@ -23,8 +23,8 @@ user_titles_count = data.groupby(['Profile Name', 'Title']).size().reset_index(n
 user_titles_count_sorted = user_titles_count.sort_values(by='Count', ascending=False)
 
 # Erstelle das Balkendiagramm für alle Benutzer
-fig = px.bar(user_titles_count_sorted, x='Title', y='Count', color='Profile Name', title='Gesehene Titel nach Häufigkeit absteigend für alle Benutzer')
-fig.update_layout(xaxis_tickangle=-45)
+fig = px.bar(user_titles_count_sorted, y='Count', x='Title', color='Profile Name')
+fig.update_layout(xaxis_tickangle=-90)
 fig.show()
 
 fig.write_html('titel_user_overall.html')
