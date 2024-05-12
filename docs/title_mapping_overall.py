@@ -24,7 +24,7 @@ user_titles_count_sorted = user_titles_count.sort_values(by='Count', ascending=F
 
 # Erstelle das Balkendiagramm für alle Benutzer
 fig = px.bar(user_titles_count_sorted, y='Count', x='Title', color='Profile Name')
-fig.update_layout(xaxis_tickangle=-90)
+fig.update_layout(xaxis_tickangle=-90,width=1200, height=1200)
 fig.show()
 
 fig.write_html('titel_user_overall.html')
